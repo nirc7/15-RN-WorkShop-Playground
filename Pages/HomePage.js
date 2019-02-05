@@ -83,7 +83,19 @@ export default class HomePage extends React.Component {
               bottom: 0,
               alignSelf: 'center',
               flexDirection: 'row',
-              padding:50
+              padding: 0
+            }}>
+            <ActionButton
+              icon='sms'
+              onPress={() => this.props.navigation.navigate('Sms')} />
+          </View>
+          <View
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              alignSelf: 'center',
+              flexDirection: 'row',
+              padding: 100
             }}>
             <ActionButton
               icon='notifications'
