@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TouchableOpacity, TextInput, Image } from 'react-native';
+import { Text, View, TouchableOpacity, TextInput, Image, KeyboardAvoidingView } from 'react-native';
 import styles from './pageStyle';
 import { Button, Dialog, DialogDefaultActions } from 'react-native-material-ui';
 
@@ -60,9 +60,9 @@ export default class LoginPage extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={styles.Header}>
-                    <Text style={styles.textBig}>Login Page</Text>
+                    <Text style={styles.textBig}>Login Page PG</Text>
                     <Image
-                    style={{alignSelf:'center', width:100, height:100}}
+                        style={{ alignSelf: 'center', width: 100, height: 100 }}
                         source={require('../assets/icon.png')} />
                 </View>
                 <View style={styles.Content}>
@@ -72,12 +72,14 @@ export default class LoginPage extends React.Component {
                         onChangeText={(text) => this.setState({ txtName: text })}
                         value={this.state.txtName}
                     />
+
                     <Text style={styles.lblText}>PASS:</Text>
                     <TextInput
                         style={styles.TxtInp}
                         onChangeText={(text) => this.setState({ txtPass: text })}
                         value={this.state.txtPass}
                     />
+
                     <TouchableOpacity
                         style={styles.Button}
                         onPress={this.btnLogin}>
@@ -92,7 +94,7 @@ export default class LoginPage extends React.Component {
                             onPress={this.btnPOST_Person}
                         />
                         {this.state.lblErr &&
-                            <View style={{ position: 'absolute',bottom: 150, alignSelf: 'center' }}>
+                            <View style={{ position: 'absolute', bottom: 150, alignSelf: 'center' }}>
                                 <Dialog>
                                     <Dialog.Title><Text>ERR Name or Pass!</Text></Dialog.Title>
                                     <Dialog.Content>

@@ -6,6 +6,7 @@ import HomePage from './Pages/HomePage';
 import LocationPage from './Pages/LocationPage';
 import CameraPage from './Pages/CameraPage';
 import PushNotPage from './Pages/PushNotPage';
+import Login2 from './Pages/Login2';
 import { ThemeProvider } from 'react-native-material-ui';
 
 
@@ -27,10 +28,11 @@ const AppNavigator = createStackNavigator(
     Home: HomePage,
     Location:LocationPage,
     Camera:CameraPage,
-    Push:PushNotPage
+    Push:PushNotPage,
+    Login2:Login2
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Login2',
   }
 );
 
