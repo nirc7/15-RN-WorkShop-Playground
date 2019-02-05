@@ -32,7 +32,7 @@ const AppNavigator = createStackNavigator(
     Login2:Login2
   },
   {
-    initialRouteName: 'Login2',
+    initialRouteName: 'Login',
   }
 );
 

@@ -58,7 +58,8 @@ export default class LoginPage extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <KeyboardAvoidingView behavior="padding"
+                style={styles.container}>
                 <View style={styles.Header}>
                     <Text style={styles.textBig}>Login Page PG</Text>
                     <Image
@@ -114,7 +115,7 @@ export default class LoginPage extends React.Component {
                         }
                     </View>
                 </View>
-            </View >
+            </KeyboardAvoidingView >
         );
     }
 }

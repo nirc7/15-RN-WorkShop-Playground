@@ -28,7 +28,7 @@ const Demo = () => {
                 placeholder="Confirm Password"
                 style={styles.input}
             />
-            <View style={{ height: 70 }} />
+            <View style={{ height: 80 }} />
         </KeyboardAvoidingView>
     );
 };
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
         // paddingVertical: 5,
         // paddingHorizontal: 15,
         width: window.width - 30,
+        padding: 10
     },
     logo: {
         height: IMAGE_HEIGHT,
