@@ -73,16 +73,19 @@ export default class LoginPage extends React.Component {
                         onChangeText={(text) => this.setState({ txtName: text })}
                         value={this.state.txtName}
                         returnKeyType='next'
+                        onSubmitEditing={()=>this.passwordInput.focus()}
                     />
-
                     <Text style={styles.lblText}>PASS:</Text>
                     <TextInput
                         style={styles.TxtInp}
                         onChangeText={(text) => this.setState({ txtPass: text })}
-                        value={this.state.txtPass}
+                        //value={this.state.txtPass}
                         returnKeyType='send'
+                        placeholder='password'
+                        placeholderTextColor='rgba(100,100,255,0.7)'
+                        secureTextEntry
+                        ref={(input) => this.passwordInput = input}
                     />
-
                     <TouchableOpacity
                         style={styles.Button}
                         onPress={this.btnLogin}>
