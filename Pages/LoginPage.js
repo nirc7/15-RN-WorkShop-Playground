@@ -72,6 +72,7 @@ export default class LoginPage extends React.Component {
                         style={styles.TxtInp}
                         onChangeText={(text) => this.setState({ txtName: text })}
                         value={this.state.txtName}
+                        returnKeyType='next'
                     />
 
                     <Text style={styles.lblText}>PASS:</Text>
@@ -79,6 +80,7 @@ export default class LoginPage extends React.Component {
                         style={styles.TxtInp}
                         onChangeText={(text) => this.setState({ txtPass: text })}
                         value={this.state.txtPass}
+                        returnKeyType='send'
                     />
 
                     <TouchableOpacity
