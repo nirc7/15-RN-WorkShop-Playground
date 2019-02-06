@@ -69,6 +69,18 @@ export default class HomePage extends React.Component {
             style={{
               //flex: 1,
               position: 'absolute',
+              bottom: 70,
+              alignSelf: 'flex-start',
+              flexDirection: 'row-reverse'
+            }}>
+            <ActionButton
+              icon='my-location'
+              onPress={() => this.props.navigation.navigate('CompassAndGeocoding')} />
+          </View>
+          <View
+            style={{
+              //flex: 1,
+              position: 'absolute',
               bottom: 0,
               alignSelf: 'flex-start',
               flexDirection: 'row-reverse'

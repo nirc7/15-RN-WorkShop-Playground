@@ -9,6 +9,7 @@ import PushNotPage from './Pages/PushNotPage';
 import Login2 from './Pages/Login2';
 import SmsPage from './Pages/SmsPage';
 import GaleryPage from './Pages/GaleryPage';
+import CompassAndGeocodingPage from'./Pages/CompassAndGeocodingPage';
 import { ThemeProvider } from 'react-native-material-ui';
 
 
@@ -33,10 +34,11 @@ const AppNavigator = createStackNavigator(
     Push:PushNotPage,
     Login2:Login2,
     Sms:SmsPage,
-    Galery:GaleryPage
+    Galery:GaleryPage,
+    CompassAndGeocoding:CompassAndGeocodingPage
   },
   {
-    initialRouteName: 'Galery',
+    initialRouteName: 'CompassAndGeocoding',
   }
 );
 

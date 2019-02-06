@@ -26,6 +26,11 @@ export default StyleSheet.create({
         fontSize: 30,
         color: 'blue'
     },
+    textSmall: {
+        fontSize: 17,
+        color: 'rgb(100,150,250)',
+        margin:5
+    },
     Button: {
         backgroundColor: 'lightgray',
         padding: 20,
