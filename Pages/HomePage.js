@@ -82,8 +82,8 @@ export default class HomePage extends React.Component {
               position: 'absolute',
               bottom: 0,
               alignSelf: 'center',
-              flexDirection: 'row',
-              padding: 0
+              flexDirection: 'row-reverse',
+              padding: 120
             }}>
             <ActionButton
               icon='sms'
@@ -95,7 +95,19 @@ export default class HomePage extends React.Component {
               bottom: 0,
               alignSelf: 'center',
               flexDirection: 'row',
-              padding: 100
+              padding: 50
+            }}>
+            <ActionButton
+              icon='apps'
+              onPress={() => this.props.navigation.navigate('Galery')} />
+          </View>
+          <View
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              alignSelf: 'center',
+              flexDirection: 'row',
+              padding: 120
             }}>
             <ActionButton
               icon='notifications'

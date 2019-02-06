@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, TouchableOpacity, TextInput, Image, KeyboardAvoidingView } from 'react-native';
 import styles from './pageStyle';
 import { Button, Dialog, DialogDefaultActions } from 'react-native-material-ui';
-import {SMS} from 'expo';
+import { SMS } from 'expo';
 
 export default class SMSPage extends React.Component {
     static navigationOptions = {
@@ -24,8 +24,8 @@ export default class SMSPage extends React.Component {
         if (isAvailable) {
             //alert('send');
             const { result } = await SMS.sendSMSAsync([this.state.txtTel1, this.state.txtTel2], this.state.txtTextValue);
-           // alert(result);
-            this.setState({txtTextValue:result});
+            // alert(result);
+            this.setState({ txtTextValue: result });
         } else {
             alert('misfortune... there\'s no SMS available on this device');
         }
@@ -40,6 +40,15 @@ export default class SMSPage extends React.Component {
                     <Image
                         style={{ alignSelf: 'center', width: 100, height: 100 }}
                         source={require('../assets/icon.png')} />
+                    <View style={{ margin: 10, justifyContent: 'flex-start' }}>
+                        <Button
+                            primary text="Go to Home Page"
+                            icon="arrow-back"
+                            upperCase={false}
+                            onPress={() => {
+                                this.props.navigation.navigate('Home');
+                            }} />
+                    </View>
                 </View>
                 <View style={styles.Content}>
                     <Text style={styles.lblText}>Tel1:</Text>
@@ -67,12 +76,12 @@ export default class SMSPage extends React.Component {
                         returnKeyType='send'
                         //placeholder='...'
                         //placeholderTextColor='rgba(100,100,255,0.7)'
-                        ref={(input) => this.TextValueInput = input} 
-                        multiline = {true}
-                        numberOfLines = {4}
-                        editable = {true}
-                        maxLength = {50} 
-                        style={{borderColor:'black' , borderWidth:2}}
+                        ref={(input) => this.TextValueInput = input}
+                        multiline={true}
+                        numberOfLines={4}
+                        editable={true}
+                        maxLength={50}
+                        style={{ borderColor: 'black', borderWidth: 2 }}
                     />
                     <View style={{ margin: 20 }}>
                         <Button
@@ -81,25 +90,6 @@ export default class SMSPage extends React.Component {
                             style={{ margin: 20 }}
                             onPress={this.btnSendSms}
                         />
-                        {this.state.lblErr &&
-                            <View style={{ position: 'absolute', bottom: 150, alignSelf: 'center' }}>
-                                <Dialog>
-                                    <Dialog.Title><Text>ERR telephone number!</Text></Dialog.Title>
-                                    <Dialog.Content>
-                                        <Text>stam dialog example!</Text>
-                                    </Dialog.Content>
-                                    <Dialog.Actions>
-                                        <DialogDefaultActions
-                                            actions={['cancel', 'we\'re good']}
-                                            onActionPress={(data) => {
-                                                alert(data);
-                                                this.setState({ lblErr: false });
-                                            }}
-                                        />
-                                    </Dialog.Actions>
-                                </Dialog>
-                            </View>
-                        }
                     </View>
                 </View>
             </KeyboardAvoidingView >

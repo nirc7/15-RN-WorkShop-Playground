@@ -8,6 +8,7 @@ import CameraPage from './Pages/CameraPage';
 import PushNotPage from './Pages/PushNotPage';
 import Login2 from './Pages/Login2';
 import SmsPage from './Pages/SmsPage';
+import GaleryPage from './Pages/GaleryPage';
 import { ThemeProvider } from 'react-native-material-ui';
 
 
@@ -31,10 +32,11 @@ const AppNavigator = createStackNavigator(
     Camera:CameraPage,
     Push:PushNotPage,
     Login2:Login2,
-    Sms:SmsPage
+    Sms:SmsPage,
+    Galery:GaleryPage
   },
   {
-    initialRouteName: 'Sms',
+    initialRouteName: 'Galery',
   }
 );
 
