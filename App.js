@@ -10,6 +10,7 @@ import Login2 from './Pages/Login2';
 import SmsPage from './Pages/SmsPage';
 import GaleryPage from './Pages/GaleryPage';
 import CompassAndGeocodingPage from'./Pages/CompassAndGeocodingPage';
+ import FaceBookPage from  './Pages/FaceBookPage';
 import { ThemeProvider } from 'react-native-material-ui';
 
 
@@ -35,10 +36,11 @@ const AppNavigator = createStackNavigator(
     Login2:Login2,
     Sms:SmsPage,
     Galery:GaleryPage,
-    CompassAndGeocoding:CompassAndGeocodingPage
+    CompassAndGeocoding:CompassAndGeocodingPage,
+    FaceBook:FaceBookPage
   },
   {
-    initialRouteName: 'CompassAndGeocoding',
+    initialRouteName: 'FaceBook',
   }
 );
 

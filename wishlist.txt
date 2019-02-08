@@ -1,3 +1,5 @@
-compass
 facebook
 face-detector
+open app from sms - deep linking
+whatsup share
+redux/mobx

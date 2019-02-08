@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, FlatList, Image } from 'react-native';
+import { Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
 import styles from './pageStyle';
 import { Button, ActionButton } from 'react-native-material-ui';
 import Rider from '../Components/Rider';
@@ -76,6 +76,30 @@ export default class HomePage extends React.Component {
             <ActionButton
               icon='my-location'
               onPress={() => this.props.navigation.navigate('CompassAndGeocoding')} />
+          </View>
+          <View style={{
+            //flex: 1,
+            position: 'absolute',
+            bottom: 90,
+            alignSelf: 'flex-start',
+            flexDirection: 'row-reverse',
+            marginLeft:100
+          }}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('FaceBook')}>
+              <View style={{
+                width: 55,
+                height: 55,
+                borderRadius: 40,
+                justifyContent: 'center',
+                backgroundColor: 'lightblue'
+              }}>
+                <Image
+                  style={{
+                    alignSelf: 'center', width: 25, height: 25,
+                  }}
+                  source={require('../assets/facebook.png')} />
+              </View>
+            </TouchableOpacity>
           </View>
           <View
             style={{
