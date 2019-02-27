@@ -4,7 +4,7 @@ import styles from './pageStyle';
 import { Button, Dialog, DialogDefaultActions } from 'react-native-material-ui';
 import { Facebook } from 'expo';
 
-export default class SMSPage extends React.Component {
+export default class FaceBookPage extends React.Component {
     static navigationOptions = {
         title: 'FACEBOOK',
     };
