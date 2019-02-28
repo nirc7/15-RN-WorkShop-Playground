@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
+import { Text, View, FlatList, Image, Dimensions, TouchableOpacity } from 'react-native';
 import styles from './pageStyle';
 import { Button, ActionButton } from 'react-native-material-ui';
 import Rider from '../Components/Rider';
@@ -67,6 +67,31 @@ export default class HomePage extends React.Component {
 
           <View
             style={{
+              position: 'absolute',
+              bottom: 90,
+              width: Dimensions.get('window').width - 10,
+              flexDirection: 'row',
+              paddingLeft: 170
+            }}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Elements')}>
+              <View style={{
+                width: 55,
+                height: 55,
+                borderRadius: 40,
+                justifyContent: 'center',
+                backgroundColor: 'white'
+              }}>
+                <Image
+                  style={{
+                    alignSelf: 'center', width: 25, height: 25,
+                    borderRadius: 50
+                  }}
+                  source={require('../assets/RNElements.png')} />
+              </View>
+            </TouchableOpacity>
+          </View>
+          <View
+            style={{
               //flex: 1,
               position: 'absolute',
               bottom: 70,
@@ -83,7 +108,7 @@ export default class HomePage extends React.Component {
             bottom: 90,
             alignSelf: 'flex-start',
             flexDirection: 'row-reverse',
-            marginLeft:100
+            marginLeft: 100
           }}>
             <TouchableOpacity onPress={() => this.props.navigation.navigate('FaceBook')}>
               <View style={{
