@@ -34,7 +34,6 @@ export default class LocationPage extends React.Component {
         errorMessage: 'Permission to access location was denied',
       });
     }
-
     let location = await Location.getCurrentPositionAsync({});
     this.setState({ location });
   };
@@ -46,19 +45,14 @@ export default class LocationPage extends React.Component {
         errorMessage: 'Permission to access location was denied',
       });
     }
-    debugger;
-
     if (this.state.location) {
       let reverseGC = await Location.reverseGeocodeAsync(this.state.location.coords);
       this.setState({ reverseGC });
     }else{
       alert('You must push the Location button first in order to get the location before you can get the reverse geocode for the latitude and longitude!');
-    }
-    
+    } 
   };
-
-
-
+  
   render() {
     let text = 'Waiting to push the Heading button...';
     if (this.state.heading) {
