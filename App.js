@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import LoginPage from './Pages/LoginPage';
 import HomePage from './Pages/HomePage';
@@ -12,6 +11,7 @@ import GaleryPage from './Pages/GaleryPage';
 import CompassAndGeocodingPage from'./Pages/CompassAndGeocodingPage';
 import FaceBookPage from  './Pages/FaceBookPage';
 import ElementsPage from './Pages/ElementsPage'
+import LinkingPage from './Pages/LinkingPage';
 import { ThemeProvider } from 'react-native-material-ui';
 
 
@@ -39,10 +39,11 @@ const AppNavigator = createStackNavigator(
     Galery:GaleryPage,
     CompassAndGeocoding:CompassAndGeocodingPage,
     FaceBook:FaceBookPage,
-    Elements:ElementsPage
+    Elements:ElementsPage,
+    Linking:LinkingPage
   },
   {
-    initialRouteName: 'FaceBook',
+    initialRouteName: 'Linking',
   }
 );
 

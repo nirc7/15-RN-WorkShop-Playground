@@ -64,7 +64,31 @@ export default class HomePage extends React.Component {
             <RiderDialog
               item={this.state.itemClickedObj}
               changeShowDialogState={this.changeShowDialogState} />}
-
+          <View
+            style={{
+              position: 'absolute',
+              bottom: 90,
+              width: Dimensions.get('window').width - 10,
+              flexDirection: 'row',
+              paddingLeft: 240
+            }}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Linking')}>
+              <View style={{
+                width: 55,
+                height: 55,
+                borderRadius: 40,
+                justifyContent: 'center',
+                backgroundColor: 'white'
+              }}>
+                <Image
+                  style={{
+                    alignSelf: 'center', width: 25, height: 25,
+                    borderRadius: 50
+                  }}
+                  source={require('../assets/deep-linking.png')} />
+              </View>
+            </TouchableOpacity>
+          </View>
           <View
             style={{
               position: 'absolute',

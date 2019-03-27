@@ -2,3 +2,5 @@ face-detector
 open app from sms - deep linking
 whatsup share
 redux/mobx
+hooks
+context API -  using function for uplifting
