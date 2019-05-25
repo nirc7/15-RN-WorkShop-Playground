@@ -71,7 +71,7 @@ export default class FaceBookPage extends React.Component {
             <KeyboardAvoidingView behavior="padding"
                 style={styles.container}>
                 <View style={styles.Header}>
-                    <Text style={styles.textBig}>FaceEBook Page PG</Text>
+                    <Text style={styles.textBig}>FaceBook Page PG</Text>
                     <Image
                         style={{ alignSelf: 'center', width: 100, height: 100 }}
                         source={require('../assets/icon.png')} />
